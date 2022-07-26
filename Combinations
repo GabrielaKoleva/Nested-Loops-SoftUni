@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+       int number = Integer.parseInt(scan.nextLine());
+
+       int counter = 0;
+
+        for (int first = 0; first <= number; first++) {
+            for (int second = 0; second <= number; second++) {
+                for (int third = 0; third <= number; third++) {
+                    int combination = first + second + third;
+                    if (combination == number){
+                        counter ++;
+                    }
+                }
+            }
+        }
+        System.out.println(counter);
+    }
+}
