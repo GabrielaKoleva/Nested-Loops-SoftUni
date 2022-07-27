@@ -8,11 +8,11 @@ public class main {
       String destination = scan.nextLine();
 
       while (!destination.equals("End")){
-          int neededMoney = Integer.parseInt(scan.nextLine());
+          double neededMoney = Double.parseDouble(scan.nextLine());
           int savedMoney = 0;
 
           while (savedMoney < neededMoney){
-              int sum = Integer.parseInt(scan.nextLine());
+              double sum = Double.parseDouble(scan.nextLine());
               savedMoney += sum;
           }
           System.out.printf("Going to %s!%n", destination);
@@ -21,3 +21,4 @@ public class main {
       }
     }
 }
+
