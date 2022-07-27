@@ -1,0 +1,23 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+      String destination = scan.nextLine();
+
+      while (!destination.equals("End")){
+          int neededMoney = Integer.parseInt(scan.nextLine());
+          int savedMoney = 0;
+
+          while (savedMoney < neededMoney){
+              int sum = Integer.parseInt(scan.nextLine());
+              savedMoney += sum;
+          }
+          System.out.printf("Going to %s!%n", destination);
+
+          destination = scan.nextLine();
+      }
+    }
+}
