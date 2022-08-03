@@ -1,24 +1,21 @@
-import java.util.Locale;
 import java.util.Scanner;
 
-public class main {
+public class Travelling_05 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-      String destination = scan.nextLine();
+        String command = scan.nextLine();
 
-      while (!destination.equals("End")){
-          double neededMoney = Double.parseDouble(scan.nextLine());
-          int savedMoney = 0;
+       while (!command.equals("End")){
+           double neededMoney = Double.parseDouble(scan.nextLine());
+           int savedMoney = 0;
 
-          while (savedMoney < neededMoney){
-              double sum = Double.parseDouble(scan.nextLine());
-              savedMoney += sum;
-          }
-          System.out.printf("Going to %s!%n", destination);
-
-          destination = scan.nextLine();
-      }
+           while (savedMoney < neededMoney){
+               double money = Double.parseDouble(scan.nextLine());
+               savedMoney += money;
+           }
+           System.out.printf("Going to %s!%n", command);
+           command = scan.nextLine();
+       }
     }
 }
-
