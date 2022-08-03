@@ -1,27 +1,30 @@
-import java.util.Locale;
 import java.util.Scanner;
 
-public class main {
+public class SumOfTwoNumbers_04 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-       int startNumber = Integer.parseInt(scan.nextLine());
-       int endNumber = Integer.parseInt(scan.nextLine());
-       int magicNumber = Integer.parseInt(scan.nextLine());
+        int startNumber = Integer.parseInt(scan.nextLine());
+        int endNumber = Integer.parseInt(scan.nextLine());
+        int magicNumber = Integer.parseInt(scan.nextLine());
 
-       int counter = 0;
+        int combinationCounter = 0;
 
         for (int i = startNumber; i <= endNumber; i++) {
             for (int j = startNumber; j <= endNumber; j++) {
-                counter++;
-                int combination = i + j;
 
-                if (combination == magicNumber){
-                    System.out.printf("Combination N:%d (%d + %d = %d)",counter, i, j, combination);
-                        return;
+                combinationCounter++;
+
+                int sum = i + j;
+
+                if (sum == magicNumber){
+                    System.out.printf("Combination N:%d (%d + %d = %d)",
+                            combinationCounter, i, j, sum);
+                    return;
                 }
             }
         }
-        System.out.printf("%d combinations - neither equals %d", counter, magicNumber);
+        System.out.printf("%d combinations - neither equals %d",
+                combinationCounter, magicNumber);
     }
 }
