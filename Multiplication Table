@@ -1,18 +1,14 @@
 import java.util.Scanner;
 
-public class main {
+public class MultiplicationTable_02 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        for (int first = 1; first <= 10; first++) {
-            for (int second = 1; second <= 10; second++) {
-                int all = first * second;
-                System.out.printf("%d * %d = %d%n", first, second, all);
-
+        for (int firstNumber = 1; firstNumber <= 10; firstNumber++) {
+            for (int secondNumber = 1; secondNumber <= 10; secondNumber++) {
+                int multiplication = firstNumber * secondNumber;
+                System.out.println(firstNumber + " * " + secondNumber + " = " + multiplication);
             }
-
         }
-
-
     }
 }
