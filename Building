@@ -1,15 +1,15 @@
-import java.util.Locale;
 import java.util.Scanner;
 
-public class main {
+public class Building_06 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-      int floors = Integer.parseInt(scan.nextLine());
-      int rooms = Integer.parseInt(scan.nextLine());
+        int floors = Integer.parseInt(scan.nextLine());
+        int rooms = Integer.parseInt(scan.nextLine());
 
         for (int floor = floors; floor >= 1; floor--) {
-            for (int room = 0; room <= rooms - 1; room++) {
+            for (int room = 0; room <= rooms - 1 ; room++) {
+
                 if (floor == floors){
                     System.out.print("L" + floor + room + " ");
                 }else if (floor % 2 == 0){
@@ -17,8 +17,10 @@ public class main {
                 }else {
                     System.out.print("A" + floor + room + " ");
                 }
+
             }
             System.out.println();
+
         }
     }
 }
