@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+       int firstNumber = Integer.parseInt(scan.nextLine());
+       int secondNumber = Integer.parseInt(scan.nextLine());
+
+        for (int i = firstNumber; i <= secondNumber; i++) {
+            int currentNumb = i;
+            
+            int evenNumber = 0;
+            int oddNumber = 0;
+
+            for (int j = 6; j >= 1; j--) {
+                int digit = currentNumb % 10;
+
+                if (j % 2 == 0){
+                    evenNumber += digit;
+                }else {
+                    oddNumber += digit;
+                }
+                currentNumb = currentNumb / 10;
+            }
+            if (evenNumber == oddNumber){
+                System.out.print(i + " ");
+            }
+
+        }
+    }
+}
