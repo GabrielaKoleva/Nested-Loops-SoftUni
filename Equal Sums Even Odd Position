@@ -1,15 +1,16 @@
 import java.util.Scanner;
 
-public class main {
+public class equalSumsEvenOddPosition_02 {
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-       int firstNumber = Integer.parseInt(scan.nextLine());
-       int secondNumber = Integer.parseInt(scan.nextLine());
+        int firstNumb = Integer.parseInt(scan.nextLine());
+        int secondNumb = Integer.parseInt(scan.nextLine());
 
-        for (int i = firstNumber; i <= secondNumber; i++) {
+        for (int i = firstNumb; i <= secondNumb; i++) {
             int currentNumb = i;
-            
+
             int evenNumber = 0;
             int oddNumber = 0;
 
@@ -19,8 +20,9 @@ public class main {
                 if (j % 2 == 0){
                     evenNumber += digit;
                 }else {
-                    oddNumber += digit;
+                    oddNumber+= digit;
                 }
+
                 currentNumb = currentNumb / 10;
             }
             if (evenNumber == oddNumber){
