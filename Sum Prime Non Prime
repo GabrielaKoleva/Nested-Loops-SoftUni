@@ -1,39 +1,38 @@
 import java.util.Scanner;
 
-public class main {
+public class sumPrimeNonPrime_03 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        String input = scan.nextLine();
-        int primeSum = 0;
-        int nonPrimeSum = 0;
-
-        while (!input.equals("stop")){
-            int currentNumber = Integer.parseInt(input);
-
-            if (currentNumber < 0){
-                System.out.println("Number is negative.");
-                input = scan.nextLine();
-                continue;
-            }
-
+    String input = scan.nextLine();
+    
+    int primeNumber = 0;
+    int nonPrimeNumber = 0;
+    
+    while (!input.equals("stop")){
+        int currentNumber = Integer.parseInt(input);
+        
+        if (currentNumber < 0){
+            System.out.println("Number is negative.");
             input = scan.nextLine();
-
-            int counter = 0;
-
-            for (int i = 1; i <= currentNumber; i++) {
-                if (currentNumber % i == 0){
-                    counter++;
-                }
-            }
-            if (counter == 2){
-                primeSum += currentNumber;
-            }else {
-                nonPrimeSum += currentNumber;
-            }
+            continue;
         }
-        System.out.printf("Sum of all prime numbers is: %d%n", primeSum);
-        System.out.printf("Sum of all non prime numbers is: %d", nonPrimeSum);
-
+        input = scan.nextLine();
+        int counter = 0;
+       
+        for (int i = 1; i <= currentNumber; i++) {
+            if (currentNumber % i == 0){
+                counter++;
+            }            
+        }
+        if (counter == 2){
+            primeNumber += currentNumber;
+        }else {
+            nonPrimeNumber += currentNumber;
+        }
+    }
+        System.out.printf("Sum of all prime numbers is: %d%n", primeNumber);
+        System.out.printf("Sum of all non prime numbers is: %d%n", nonPrimeNumber);
+    
     }
 }
