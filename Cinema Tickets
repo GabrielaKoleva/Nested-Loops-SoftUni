@@ -1,50 +1,50 @@
 import java.util.Scanner;
 
-public class main {
+public class cinemaTickets_06 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-      String input = scan.nextLine();
-      int allCounterTicket = 0;
-      int student = 0;
-      int standard = 0;
-      int kids = 0;
+        String input = scan.nextLine();
+        int allCounterTicket = 0;
+        int student = 0;
+        int standard = 0;
+        int kids = 0;
 
-      while (!input.equals("Finish")){
-          String movie = input;
-          int seats = Integer.parseInt(scan.nextLine());
+        while (!input.equals("Finish")){
+            String movie = input;
+            int seats = Integer.parseInt(scan.nextLine());
 
-          String typeOfTicket = scan.nextLine();
+            String typeOfTicket = scan.nextLine();
 
-          int counterCurrentTicket = 0;
-          while (!typeOfTicket.equals("End")) {
-              counterCurrentTicket++;
-              allCounterTicket++;
+            int counterCurrentTicket = 0;
+            while (!typeOfTicket.equals("End")) {
+                counterCurrentTicket++;
+                allCounterTicket++;
 
 
-              switch (typeOfTicket){
-                  case "student":
-                      student++;
-                      break;
-                  case "standard":
-                      standard++;
-                      break;
-                  case "kid":
-                      kids++;
-                      break;
-              }
-              if (counterCurrentTicket >= seats){
-                  break;
-              }
-              
-              typeOfTicket = scan.nextLine();
+                switch (typeOfTicket){
+                    case "student":
+                        student++;
+                        break;
+                    case "standard":
+                        standard++;
+                        break;
+                    case "kid":
+                        kids++;
+                        break;
+                }
+                if (counterCurrentTicket >= seats){
+                    break;
+                }
 
-          }
-              System.out.printf("%s - %.2f%% full.%n",
-                      movie,counterCurrentTicket * 1.0 / seats * 100);
+                typeOfTicket = scan.nextLine();
 
-          input = scan.nextLine();
-      }
+            }
+            System.out.printf("%s - %.2f%% full.%n",
+                    movie,counterCurrentTicket * 1.0 / seats * 100);
+
+            input = scan.nextLine();
+        }
         System.out.printf("Total tickets: %d%n", allCounterTicket);
         System.out.printf("%.2f%% student tickets.%n",
                 student * 1.0 / allCounterTicket * 100);
